@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/glyphmusic/plugins/main/schema/glyph-plugin.schema.json",
+  "schema": 1,
+  "id": "change-me",
+  "name": "My Theme",
+  "version": "1.0.0",
+  "author": "your-github-name",
+  "description": "One sentence about how your theme looks.",
+  "license": "MIT",
+  "kind": "theme",
+  "theme": {
+    "accent": "#ff7a6b",
+    "glow": ["#06103a", "#2a4fd6", "#ff9b8a"],
+    "base": "#020308"
+  }
+}

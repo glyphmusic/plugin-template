@@ -1,0 +1,32 @@
+# Checks glyph-plugin.json with the same rules Glyph uses, on every push and
+# pull request. The rules live in glyphmusic/plugins (scripts/manifest.mjs).
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    # The template itself still has the placeholder id.
+    if: github.repository != 'glyphmusic/plugin-template'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch the validator
+        run: |
+          mkdir -p "$RUNNER_TEMP/glyph"
+          for f in manifest.mjs validate.mjs; do
+            curl -fsSL "https://raw.githubusercontent.com/glyphmusic/plugins/main/scripts/$f" -o "$RUNNER_TEMP/glyph/$f"
+          done
+      - name: Validate glyph-plugin.json
+        run: node "$RUNNER_TEMP/glyph/validate.mjs" glyph-plugin.json
+      - name: The id was changed
+        run: |
+          if grep -q '"id": *"change-me"' glyph-plugin.json; then
+            echo "::error file=glyph-plugin.json::Give your plugin its own id (it is still \"change-me\")."
+            exit 1
+          fi
