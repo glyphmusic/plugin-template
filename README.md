@@ -17,6 +17,10 @@ Change the colours, raise `version` (`1.0.0` → `1.1.0`) and push. Glyph instal
 
 Link to `https://glyph.my/plugins/<your id>`. That page shows your theme with its colours and has an **Install in Glyph** button.
 
+## More than colours
+
+This template makes a theme. To rename texts, hide settings or run code (your own settings page, song menu entries, control over playback, library and settings, web requests), make it an **extension**: set `"schema": 2` and `"kind": "extension"`. Start from [the example extension](https://github.com/glyphmusic/plugins/tree/main/examples/now-playing) and read [Extensions](https://docs.glyph.my/plugins/extensions) and the [API reference](https://docs.glyph.my/plugins/api). The Validate workflow checks extensions too, including the `.wasm` your `main` points to.
+
 ## More
 
 - [How plugins work](https://docs.glyph.my/plugins/how-it-works): what Glyph does from the GitHub topic to the colours on screen
