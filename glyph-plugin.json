@@ -7,7 +7,7 @@
   "author": "your-github-name",
   "description": "One sentence about how your theme looks.",
   "license": "MIT",
-  "min_app": "0.12.11",
+  "min_app": "0.13.6",
   "kind": "theme",
   "theme": {
     "accent": "#ff7a6b",
