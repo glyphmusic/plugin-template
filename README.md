@@ -9,6 +9,10 @@ Start a theme for [Glyph](https://glyph.my) here. Click **Use this template** �
 
 The **Validate** workflow checks `glyph-plugin.json` on every push with the same rules Glyph uses. If it fails, its log names the problem.
 
+## Your own icons
+
+The template brings its own app icon (`app-icon.png`) and like buttons (`icons/heart.svg`, `icons/heart-fill.svg`). Replace the files with yours, or remove the `look` block to keep Glyph's. The app icon is a square PNG, 64 to 1024 pixels. Icons are 24 × 24 SVGs drawn in the text colour. A look can do much more: fonts, corners, background pictures, the order of the home page and sidebar, and the startup animation. See [Looks](https://docs.glyph.my/plugins/looks).
+
 ## Ship an update
 
 Change the colours, raise `version` (`1.0.0` → `1.1.0`) and push. Glyph installs the new version for everyone who has your theme, unless they turned automatic updates off.
