@@ -17,6 +17,8 @@ The template brings its own app icon (`app-icon.png`) and like buttons (`icons/h
 
 Change the colours, raise `version` (`1.0.0` → `1.1.0`) and push. Glyph installs the new version for everyone who has your theme, unless they turned automatic updates off.
 
+Add a short `"changes"` text (what is new, up to 300 characters) so people see it with the update. If a later Glyph breaks your theme, set `"max_app"` (like `"0.14"`) to pause it there until you ship a fix. See [Versions](https://github.com/glyphmusic/plugins#versions).
+
 ## Share it
 
 Link to `https://glyph.my/plugins/<your id>`. That page shows your theme with its colours and has an **Install in Glyph** button.
